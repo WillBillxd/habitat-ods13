@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- PASO 1: permite que el navegador use el ancho real del celular. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio | Proyecto Hábitat - ODS 13</title>
+  <!-- PASO 2: conectar este HTML con el archivo CSS compartido. -->
+  <link rel="stylesheet" href="css/estilos.css">
+  <!-- Este icono aparece en la pestaña del navegador. -->
+  <link rel="icon" type="image/svg+xml" href="iconos/logo.png">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<!-- PASO 3: este header permanece visible con position: sticky en CSS. -->
+<header class="cabecera">
+  <div class="contenedor barra">
+    <a class="marca" href="index.html"><img src="iconos/logo.png" alt="" width="42" height="42">Proyecto Hábitat - ODS 13</a>
+    <!-- PASO 4: la lista principal se ordena horizontalmente con Flexbox. -->
+    <nav aria-label="Navegación principal">
+      <ul class="menu">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li>
+          <!-- details abre el submenú con clic, Enter o toque; no necesita JS. -->
+          <details class="desplegable">
+            <summary>Acciones</summary>
+            <!-- Esta lista es el menú vertical desplegable. -->
+            <ul class="submenu">
+              <li><a href="index.html#servicios">Ejes de acción</a></li>
+              <li><a href="index.html#orientador">Explorar metas</a></li>
+              <li><a href="index.html#contacto">Sumarse al proyecto</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="recursos.html">Video y guía</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="contenido">
+  <!-- PASO 5: el inicio está en la sección, no en el header sticky. -->
+  <section id="inicio" class="hero contenedor dos-columnas" aria-labelledby="titulo">
+    <div>
+      <p class="etiqueta">Acción por el clima · ODS 13</p>
+      <h1 id="titulo">El clima cambia.<br>Nuestra acción empieza hoy.</h1>
+      <p>El aumento de las temperaturas y los fenómenos extremos exigen respuestas inmediatas. En Proyecto Hábitat - ODS 13 promovemos información, hábitos sostenibles y resiliencia comunitaria.</p>
+      <a class="boton" href="#orientador">Explorar metas</a>
+      <a class="enlace" href="recursos.html">Conocer la iniciativa</a>
+      <p class="nota">Iniciativa educativa dedicada al Objetivo de Desarrollo Sostenible 13.</p>
+    </div>
+    <figure class="postal">
+      <img class="foto" src="imagenes/app2.jpeg" alt="Persona monitoreando indicadores ambientales con una tableta en el bosque" width="1000" height="667">
+      <figcaption>Tecnología y conciencia ambiental para proteger nuestros ecosistemas.</figcaption>
+    </figure>
+  </section>
+
+  <section id="nosotros" class="seccion fondo">
+    <div class="contenedor dos-columnas">
+      <img class="foto" src="imagenes/feria.jpg" alt="Alimentos frescos de agricultura local y sostenible" width="1000" height="667" loading="lazy">
+      <div>
+        <p class="etiqueta">Compromiso con nuestro entorno</p>
+        <h2>No tenemos un planeta de repuesto.</h2>
+        <p>Proyecto Hábitat - ODS 13 es una iniciativa orientada a sensibilizar sobre la crisis climática, fomentar la reducción de emisiones de carbono y fortalecer la capacidad de adaptación frente a riesgos ambientales.</p>
+        <h3>Nuestra propuesta</h3>
+        <p>Acercar datos claros, metas globales y acciones cotidianas para que cada comunidad reduzca su huella ecológica desde una sola plataforma.</p>
+        <p>El proyecto se articula directamente con el Objetivo de Desarrollo Sostenible 13 (Acción por el clima) de la Agenda 2030 de las Naciones Unidas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" class="seccion contenedor">
+    <p class="etiqueta">Un recorrido sencillo</p>
+    <h2>De la conciencia a la acción climática.</h2>
+    <div class="tarjetas">
+      <article class="tarjeta">
+        <span class="numero">01 / Infórmate</span>
+        <h3>Comprende el impacto</h3>
+        <p>Conoce las causas del calentamiento global y las metas principales del ODS 13.</p>
+        <a href="#orientador">Ver ejes</a>
+      </article>
+      <article class="tarjeta">
+        <span class="numero">02 / Participa</span>
+        <h3>Propón una iniciativa</h3>
+        <p>Comparte una acción local o reporte ambiental para fortalecer la sostenibilidad en tu barrio.</p>
+        <a href="#contacto">Enviar propuesta</a>
+      </article>
+      <article class="tarjeta">
+        <span class="numero">03 / Transforma</span>
+        <h3>Aplica buenas prácticas</h3>
+        <p>Consulta guías sobre consumo responsable, ahorro energético y cuidado de áreas verdes.</p>
+        <a href="recursos.html">Ver la guía</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="orientador" class="seccion fondo">
+    <div class="contenedor">
+      <p class="etiqueta">Explorar pilares · Metas del ODS 13</p>
+      <h2>¿Cómo podemos actuar hoy?</h2>
+      <p>Selecciona un eje temático del ODS 13 para conocer sus objetivos y cómo contribuir desde tu entorno.</p>
+      <!-- PASO 7: mismo name, distintos id. Los radios controlan paneles con CSS. -->
+      <fieldset class="orientador">
+        <legend>Eje de acción climática</legend>
+        <input type="radio" name="objeto" id="mochila" checked><label for="mochila">Mitigación y emisiones</label>
+        <input type="radio" name="objeto" id="libreta"><label for="libreta">Educación ambiental</label>
+        <input type="radio" name="objeto" id="abrigo"><label for="abrigo">Resiliencia y adaptación</label>
+        <div class="resultados">
+          <div class="respuesta mochila">
+            <p class="etiqueta">Meta 13.2 · Reducción de huella</p>
+            <h3>Disminuir los gases de efecto invernadero</h3>
+            <p>Impulsar el uso de energías limpias, la movilidad sostenible y el consumo de productos locales reduce directamente las emisiones contaminantes en nuestras ciudades.</p>
+          </div>
+          <div class="respuesta libreta">
+            <p class="etiqueta">Meta 13.3 · Sensibilización</p>
+            <h3>Formar comunidades informadas y activas</h3>
+            <p>Mejorar la educación ambiental y la capacidad institucional es clave para prevenir el impacto climático y adoptar hábitos de consumo responsables.</p>
+          </div>
+          <div class="respuesta abrigo">
+            <p class="etiqueta">Meta 13.1 · Prevención de riesgos</p>
+            <h3>Fortalecer la respuesta ante desastres</h3>
+            <p>Preparar nuestros espacios urbanos y ecosistemas frente a olas de calor, sequías e inundaciones protege la vida y la biodiversidad local.</p>
+          </div>
+          <a class="boton" href="#contacto">Quiero sumarme a esta acción</a>
+        </div>
+      </fieldset>
+      <p class="nota">Información basada en las metas oficiales del Objetivo de Desarrollo Sostenible 13 de la ONU.</p>
+    </div>
+  </section>
+
+  <section id="proyectos" class="seccion contenedor">
+    <p class="etiqueta">Nuestro enfoque</p>
+    <h2>Un cambio sostenible paso a paso.</h2>
+    <div class="tarjetas">
+      <article class="tarjeta">
+        <h3>Medimos</h3>
+        <p>Identificamos hábitos cotidianos y puntos críticos de consumo energético o generación de residuos.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Educamos</h3>
+        <p>Difundimos herramientas accesibles y talleres prácticos sobre sostenibilidad y cuidado del hábitat.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Actuamos</h3>
+        <p>Promovemos campañas de arborización, reciclaje y adaptación climática junto a la comunidad.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="galeria" class="seccion fondo">
+    <div class="contenedor">
+      <h2>Cada acción cuenta para nuestro hábitat.</h2>
+      <div class="galeria">
+        <figure>
+          <img src="imagenes/app2.jpeg" alt="Monitoreo digital de indicadores ecológicos en un bosque" width="1000" height="667" loading="lazy">
+          <figcaption>Innovación y seguimiento ambiental</figcaption>
+        </figure>
+        <figure>
+          <img src="imagenes/feria.jpg" alt="Alimentos frescos de agricultura sostenible y comercio local" width="1000" height="667" loading="lazy">
+          <figcaption>Consumo responsable y producción limpia</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonios" class="seccion contenedor">
+    <blockquote>“No heredamos la Tierra de nuestros ancestros, la tomamos prestada de nuestros hijos”.</blockquote>
+    <p>Proverbio ambiental que inspira nuestro compromiso con la acción climática.</p>
+  </section>
+
+  <section id="contacto" class="seccion fondo">
+    <div class="contenedor dos-columnas">
+      <div>
+        <p class="etiqueta">Participación ciudadana · Únete al cambio</p>
+        <h2>Cuéntanos tu iniciativa.</h2>
+        <p>Completa el formulario para registrar una propuesta ambiental, reportar un punto crítico en tu comunidad o sumarte como voluntario.</p>
+        <p class="nota">Este formulario es una demostración educativa sobre el ODS 13. No almacena datos personales reales.</p>
+      </div>
+      <!-- PASO 8: required valida campos. Sin name: no añadimos datos a la URL. -->
+      <form action="confirmacion.html" method="get" class="formulario">
+        <label for="nombre">Nombre completo</label>
+        <input id="nombre" type="text" required maxlength="60" placeholder="Ejemplo: Camila Torres" autocomplete="off">
+        
+        <label for="correo">Correo electrónico</label>
+        <input id="correo" type="email" required placeholder="camila@ejemplo.org" autocomplete="off">
+        
+        <label for="actividad">Eje del ODS 13</label>
+        <select id="actividad" required>
+          <option value="">Selecciona una categoría</option>
+          <option>Mitigación y reducción de emisiones</option>
+          <option>Educación y sensibilización ambiental</option>
+          <option>Resiliencia y adaptación climática</option>
+        </select>
+        
+        <label for="detalle">Describe tu propuesta o acción</label>
+        <textarea id="detalle" required minlength="8" maxlength="240" rows="3" placeholder="Escribe la iniciativa ambiental que te gustaría impulsar"></textarea>
+        
+        <div>
+          <input id="acepto" type="checkbox" required>
+          <label for="acepto">Entiendo que es una simulación educativa.</label>
+        </div>
+        <button type="submit" class="boton">Enviar propuesta</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- PASO FINAL: pie compartido por las páginas del sitio. -->
+<footer class="pie">
+  <div class="contenedor">
+    <p><strong>Proyecto Hábitat - ODS 13</strong> · Acción por el clima y sostenibilidad</p>
+    <p>Contacto: contacto@proyectohabitat.org</p>
+    <nav class="redes" aria-label="Redes sociales de referencia">
+      <!-- Son páginas generales de las redes; reemplazar por cuentas del proyecto. -->
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/facebook.svg" alt="" width="24" height="24">Facebook</a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/instagram.svg" alt="" width="24" height="24">Instagram</a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/youtube.svg" alt="" width="24" height="24">YouTube</a>
+    </nav>
+    <p>© 2026 Proyecto Hábitat - ODS 13 · Iniciativa educativa ambiental · <a href="FUENTES.txt">Créditos de recursos</a></p>
+  </div>
+</footer>
+</body>
+</html>
